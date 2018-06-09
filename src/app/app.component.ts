@@ -14,4 +14,9 @@ export class AppComponent {
     new Article('The $300 Billion FAANG Surge Lives Another Week', 'Markets', 'author', '06/08/2018', 'image', 'content', 'links'),
     new Article('Disney Says Pixars John Lasseter Will Leave Company by Year-End', 'Business', 'author', '06/08/2018', 'image', 'content', 'links'),
   ];
+  currentTitle: string = '';
+  authoredDate = new Date();
+  month: number = authoredDate.getMonth() + 1;
+  day: number = authoredDate.getDay();
+  year: number = authoredDate.getYear();
 }

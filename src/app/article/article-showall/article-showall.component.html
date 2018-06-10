@@ -1,13 +1,13 @@
-<select>
+<select (change)="onChange($event.target.value)">
   <option value="allArticles">All News</option>
-  <option value="recentArticles">Recent News</option>
-  <option value="topArticles">Top News</option>
+  <option value="recentArticles" selected="selected">Recent News</option>
+  <option value="topArticles" selected="selected">Top News</option>
 </select>
 
 <ul>
-  <li [class]="chooseArticle(currentArticle)" *ngFor="let currentArticle of childArticleShowall | completeness">{{currentArticle.name}} {{currentArticle.read}}
-    <input *ngIf="currentArticle.done === true" type="checkbox" checked (click)="toggleDone(currentArticle, false)"/>
-    <input *ngIf="currentArticle.done === false" type="checkbox" (click)="toggleDone(currentArticle, true)"/>
+  <li [class]="chooseArticle(currentArticle)" *ngFor="let currentArticle of childArticleShowall | selected">{{currentArticle.name}} {{currentArticle.read}}
+    <input *ngIf="currentArticle.pure === false" type="checkbox" checked (click)="toggleSelected(currentArticle, true)"/>
+    <input *ngIf="currentArticle.pure === true" type="checkbox" (click)="toggleSelected(currentArticle, false)"/>
     <button (click)="editButtonClicked(currentArticle)">Choose Another Article</button>
   </li>
 </ul>

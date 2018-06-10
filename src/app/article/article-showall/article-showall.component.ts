@@ -11,11 +11,22 @@ export class ArticleShowallComponent implements OnInit {
   topArticles: Article[] = [];
   currentArticle: object = {};
 
+  //filter types
+  filterByRecent: string = "recentArticles";
+  filterByTop: string = "topArticles";
+
 chooseArticle(click){
   if (click ==true){
     return this.currentArticle;
   }
 }
+
+//choose filter type
+onChange(optionSelected){
+  this.filterByRecent = optionSelected;
+  this.filterByTop = optionSelected;
+}
+
   constructor() {
     public Boolean = false;
     //borrows from the Article constructor in Models

@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article-showall.component.css']
 })
 export class ArticleShowallComponent implements OnInit {
+  allArticles: Article[] = [];
+  recentArticles: Article[] = [];
+  topArticles: Article[] = [];
+  currentArticle: object = {};
 
-  constructor() { }
+chooseArticle(click){
+  if (click ==true){
+    return this.currentArticle;
+  }
+}
+  constructor() {
+    public Boolean = false;
+    //borrows from the Article constructor in Models
+    }
 
   ngOnInit() {
   }

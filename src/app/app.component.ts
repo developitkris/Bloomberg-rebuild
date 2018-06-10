@@ -7,6 +7,7 @@ import { Article } from './models/article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentFocus: object = {};
   topNews: Articles[]= [
     new Article('G-7 Officials Toil Through Night to Paper Over Differences', 'Politics', 'author', '06/08/2018', 'image', 'content', 'links'),
     new Article('PG&E Equipment Tied to Some of the Deadliest Wine Country Fires', 'Business', 'author', '06/08/2018', 'image', 'content', 'links'),

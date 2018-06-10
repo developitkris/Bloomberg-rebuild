@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppComponent } from './app.component';
+import { CompletenessPipe } from './completeness.pipe';
 
 import { AccountCreateComponent } from './account/account-create/account-create.component';
 import { AccountLoginComponent } from './account/account-login/account-login.component';
@@ -34,7 +33,8 @@ import { TickerUpdateComponent } from './ticker/ticker-update/ticker-update.comp
     QuicklinksRedirectComponent,
     VideoShowallComponent,
     VideoPlayComponent,
-    TickerUpdateComponent
+    TickerUpdateComponent,
+    CompletenessPipe
   ],
   imports: [
     BrowserModule,

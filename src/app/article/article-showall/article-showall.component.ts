@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Article } from '../models/article.model';
 
 @Component({
   selector: 'app-article-showall',
@@ -9,7 +10,7 @@ export class ArticleShowallComponent implements OnInit {
   allArticles: Article[] = [];
   recentArticles: Article[] = [];
   topArticles: Article[] = [];
-  currentArticle: object = {};
+  currentView = this.allArticles;
   filterByView: string = "allArticles"; //default view
 
 articleSector(clicked){
@@ -30,6 +31,9 @@ articleSector(clicked){
   }
 }
 
+toggleSelected(clickedArticle: Article, setSelected: boolean) {
+    clickedArticle.pure = setSelected;
+  }
 //method for filter change
 onChange(optionSelected){
   this.filterByView = optionSelected;

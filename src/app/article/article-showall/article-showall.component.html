@@ -5,9 +5,9 @@
 </select>
 
 <ul>
-  <li [class]="articleSector(currentArticle)" *ngFor="let currentArticle of childArticleShowall | selected:filterByView">{{currentArticle.name}} {{currentArticle.read}}
-    <input *ngIf="currentArticle.pure === false" type="checkbox" checked (click)="toggleSelected(currentArticle, true)"/>
-    <input *ngIf="currentArticle.pure === true" type="checkbox" (click)="toggleSelected(currentArticle, false)"/>
-    <button (click)="editButtonClicked(currentArticle)">Choose Another Article</button>
+  <li [class]="articleSector(currentView)" *ngFor="let currentView of childArticleShowall | selected:filterByView">{{currentView.name}} {{currentView.sector}}
+    <input *ngIf="currentView.pure === false" type="checkbox" checked (click)="toggleSelected(currentView, true)"/>
+    <input *ngIf="currentView.pure === true" type="checkbox" (click)="toggleSelected(currentView, false)"/>
+    <button (click)="editButtonClicked(currentView)">Choose Another Article</button>
   </li>
 </ul>

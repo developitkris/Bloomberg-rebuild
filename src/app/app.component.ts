@@ -17,7 +17,9 @@ export class AppComponent {
   ];
   currentTitle: string = '';
   authoredDate = new Date();
-  month: number = authoredDate.getMonth() + 1;
-  day: number = authoredDate.getDay();
-  year: number = authoredDate.getYear();
+  month: number = this.authoredDate.getMonth() + 1;
+  day: number = this.authoredDate.getDay();
+  year: number = this.authoredDate.getFullYear();
+
+  
 }

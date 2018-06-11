@@ -7,6 +7,12 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./account-login.component.css']
 })
 export class AccountLoginComponent implements OnInit {
+  @Input() childAccountLogin: Account[];
+  @Output() clickSender = new EventEmitter();
+
+  loginButtonClicked(accountToLogin: Account){
+    this.clickSender.emit(accountTologin);
+  }
 
   constructor() { }
 

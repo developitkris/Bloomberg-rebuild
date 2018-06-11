@@ -7,7 +7,11 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-new.component.css']
 })
 export class ArticleNewComponent implements OnInit {
+  @Input() childArticleNew: Article[];
+  @Output() clickSender = new EventEmitter();
 
+  //dynamically add new articles via API
+  
   constructor() { }
 
   ngOnInit() {

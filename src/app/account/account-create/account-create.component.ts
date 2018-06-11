@@ -7,6 +7,12 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./account-create.component.css']
 })
 export class AccountCreateComponent implements OnInit {
+  @Input() childAccountCreate: Account[];
+  @Output() clickSender = new EventEmitter();
+
+  subscribeButtonClicked(accountToCreate: Account){
+    this.clickSender.emit(accountToCreate);
+  }
 
   constructor() { }
 

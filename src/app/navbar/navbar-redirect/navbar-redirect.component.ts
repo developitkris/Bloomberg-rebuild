@@ -7,6 +7,12 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./navbar-redirect.component.css']
 })
 export class NavbarRedirectComponent implements OnInit {
+  @Input() childNavbarRedirect: Page[];
+  @Output() clickSender = new EventEmitter();
+
+  navButtonClicked(pageToGo: Page){
+    this.clickSender.emit(pageToGo);
+  }
 
   constructor() { }
 

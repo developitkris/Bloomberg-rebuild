@@ -7,3 +7,18 @@ export class Article {
     public links: String
   ){}
 }
+
+export class Account {
+  constructor {
+    public name: string,
+    public email: string,
+    public pw: string,
+  }
+}
+
+// export class Page {
+//   constructor {
+//     public category: string,
+//     public video: String
+//   }
+// }

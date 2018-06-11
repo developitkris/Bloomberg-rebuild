@@ -7,6 +7,13 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-showall.component.css']
 })
 export class ArticleShowallComponent implements OnInit {
+  @Input() childArticleShowall: Article[];
+  @Output() clickSender = new EventEmitter();
+
+  filterButtonClicked(filterToShow: Article){
+    this.clickSender.emit(filterToShow);
+  }
+
   allArticles: Article[] = [];
   recentArticles: Article[] = [];
   topArticles: Article[] = [];

@@ -7,6 +7,8 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./ticker-update.component.css']
 })
 export class TickerUpdateComponent implements OnInit {
+  
+  //dynamically update ticker via API
 
   constructor() { }
 

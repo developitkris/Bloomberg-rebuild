@@ -7,6 +7,13 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-read.component.css']
 })
 export class ArticleReadComponent implements OnInit {
+  @Input() childArticleRead: Article[];
+  @Output() clickSender = new EventEmitter();
+
+  articleClicked(articleToRead: Article){
+    this.clickSender.emit(articleToRead);
+  }
+
   currentTitle = this.Article[].title = "";
   authoredDate = new Date();
   month: number = this.authoredDate.getMonth() + 1;

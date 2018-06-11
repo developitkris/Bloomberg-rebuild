@@ -7,6 +7,12 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-search.component.css']
 })
 export class ArticleSearchComponent implements OnInit {
+  @Input() childArticleSearch: Article[];
+  @Output() clickSender = new EventEmitter();
+
+  searchButtonClicked(articleToSearch: Article){
+    this.clickSender.emit(articleToSearch);
+  }
 
   constructor() { }
 

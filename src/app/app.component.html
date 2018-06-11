@@ -4,3 +4,9 @@
   <h4>{{sectors}}</h4>
   <router-outlet></router-outlet>
 </div>
+
+<account-create [childAccountCreate]="masterAccountCreate" (clickSender)="createAccount($event)"></account-create>
+<account-login [childAccountLogin]="masterAccountLogin" (clickSender)="loginAccount($event)"></account-login>
+<article-search [childArticleSearch]="masterArticleSearch" (clickSender)="searchArticle($event)"></article-search>
+<navbar-redirect [childNavbarRedirect]="masterNavbarRedirect" (clickSender)="redirectPage($event)"></navbar-redirect>
+<quicklinks-redirect [childQuicklinksRedirect]="masterQuicklinksRedirect" (clickSender)="redirectPage($event)"></quicklinks-redirect>

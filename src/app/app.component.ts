@@ -8,7 +8,10 @@ import { Article } from './models/article.model';
 })
 export class AppComponent {
   currentFocus: object = {}; //user's chosen type & behavior(component)
-
+  titles: Articles[] = [];
+  authors: Articles[] = [];
+  sectors: Articles[] = [];
+  
   topNews: Article[]= [
     new Article('Trump Advisers Slam Trudeaus Betrayal Days Before Kim Summit', 'Politics', 'Mark Niquette', 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilHpV14unnK4/v0/800x600.jpg', 'https://www.bloomberg.com/news/articles/2018-06-10/kudlow-blames-trudeau-for-betrayal-before-north-korea-talks'),
     new Article('G-7 Officials Toil Through Night to Paper Over Differences', 'Politics', 'Jennifer Epstein', 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAbOO3CZqDHY/v2/-1x-1.jpg', 'https://www.bloomberg.com/news/articles/2018-06-09/g-7-officials-toil-through-night-to-paper-over-differences'),

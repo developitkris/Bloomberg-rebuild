@@ -7,6 +7,7 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-read.component.css']
 })
 export class ArticleReadComponent implements OnInit {
+  currentTitle = this.Article[].title = "";
   authoredDate = new Date();
   month: number = this.authoredDate.getMonth() + 1;
   day: number = this.authoredDate.getDay();

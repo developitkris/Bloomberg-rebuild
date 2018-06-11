@@ -10,21 +10,29 @@ export class ArticleShowallComponent implements OnInit {
   recentArticles: Article[] = [];
   topArticles: Article[] = [];
   currentArticle: object = {};
+  filterByView: string = "allArticles"; //default view
 
-  //filter types
-  filterByRecent: string = "recentArticles";
-  filterByTop: string = "topArticles";
-
-chooseArticle(click){
-  if (click ==true){
-    return this.currentArticle;
+articleSector(clicked){
+  if (clicked ===1){
+    return "POLITICS";
+  } else if (clicked ===2){
+    return "BUSINESS";
+  } else if (clicked ===3){
+    return "MARKETS";
+  } else if (clicked ===4){
+    return "PURSUITS";
+  } else if (clicked ===5){
+    return "ECONOMICS";
+  } else if (clicked ===6){
+    return "OPINION";
+  } else {
+    return "TECHNOLOGY";
   }
 }
 
-//choose filter type
+//method for filter change
 onChange(optionSelected){
-  this.filterByRecent = optionSelected;
-  this.filterByTop = optionSelected;
+  this.filterByView = optionSelected;
 }
 
   constructor() {

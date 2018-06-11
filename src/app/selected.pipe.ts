@@ -3,7 +3,7 @@ import {Article} from './models/article.model';
 
 @Pipe({
   name: "selected",
-  pure: true
+  pure: true 
 })
 
 //if impure, change view to input[i]

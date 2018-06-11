@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from '../../models/article.model';
 
 @Component({
   selector: 'app-article-read',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article-read.component.css']
 })
 export class ArticleReadComponent implements OnInit {
+  authoredDate = new Date();
+  month: number = this.authoredDate.getMonth() + 1;
+  day: number = this.authoredDate.getDay();
+  year: number = this.authoredDate.getFullYear();
 
-  constructor() { }
+  constructor( //to be added onto Article object's existing parameters
+    public date: Date,
+    public content: string //maybe an array of strings)
+  ){}
 
   ngOnInit() {
   }

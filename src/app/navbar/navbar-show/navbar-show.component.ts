@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Article } from '../models/article.model';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Article } from '../../models/article.model';
 
 @Component({
   selector: 'app-navbar-show',
@@ -8,21 +8,29 @@ import { Article } from '../models/article.model';
 })
 export class NavbarShowComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public read: string,
+    public watch: string,
+    public listen: string,
+    public data: string,
+    public sr: string,
+    public follow: string,
+    public subscribe: string
+  ) {}
 
   ngOnInit() {
   }
-  Home = ;
-  Markets = ;
-  Technology = ;
-  Politics = ;
-  Pursuits = ;
-  Opinion = ;
-  Businessweek = ;
-  Video = ;
-  Audio = ;
-  Newsletters = ;
-  Watchlist = ;
-  Subscribe = ;
-  Signin = ;
+  Home: NavbarShowComponent[] = [];
+  Markets: NavbarShowComponent[] = [];
+  Technology: NavbarShowComponent[] = [];
+  Politics: NavbarShowComponent[] = [];
+  Pursuits: NavbarShowComponent[] = [];
+  Opinion: NavbarShowComponent[] = [];
+  Businessweek: NavbarShowComponent[] = [];
+  Video: NavbarShowComponent[] = [];
+  Audio: NavbarShowComponent[] = [];
+  Newsletters: NavbarShowComponent[] = [];
+  Watchlist: NavbarShowComponent[] = [];
+  Subscribe: NavbarShowComponent[] = [];
+  Signin: NavbarShowComponent[] = [];
 }

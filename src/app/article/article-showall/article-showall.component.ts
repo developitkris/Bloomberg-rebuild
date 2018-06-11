@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Article } from '../models/article.model';
+import { Article } from '../../models/article.model';
 
 @Component({
   selector: 'app-article-showall',

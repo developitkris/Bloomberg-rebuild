@@ -3,7 +3,7 @@ export class Article {
     public title: string,
     public sector: string,
     public author: string,
-    public image: HTMLImageElement,
+    public image: String,
     public links: String
   ){}
 }

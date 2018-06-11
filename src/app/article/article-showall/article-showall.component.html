@@ -8,6 +8,6 @@
   <li [class]="articleSector(currentView)" *ngFor="let currentView of childArticleShowall | selected:filterByView">{{currentView.name}} {{currentView.sector}}
     <input *ngIf="currentView.pure === false" type="checkbox" checked (click)="toggleSelected(currentView, true)"/>
     <input *ngIf="currentView.pure === true" type="checkbox" (click)="toggleSelected(currentView, false)"/>
-    <button (click)="editButtonClicked(currentView)">Choose Another Article</button>
+    <button (click)="changeView(currentView)">Choose Another Article</button>
   </li>
 </ul>

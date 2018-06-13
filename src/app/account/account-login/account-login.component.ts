@@ -11,7 +11,7 @@ export class AccountLoginComponent implements OnInit {
   @Output() clickSender = new EventEmitter();
 
   loginButtonClicked(accountToLogin: Account){
-    this.clickSender.emit(accountTologin);
+    this.clickSender.emit(accountToLogin);
   }
 
   constructor() { }

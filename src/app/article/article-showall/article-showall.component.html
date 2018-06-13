@@ -1,13 +1,14 @@
-<select (change)="onChange($event.target.value)">
+<!-- <select (change)="onChange($event.target.value)">
   <option value="allArticles">All News</option>
   <option value="recentArticles" selected="selected">Recent News</option>
   <option value="topArticles" selected="selected">Top News</option>
 </select>
 
+``
 <ul>
   <li [class]="articleSector(currentView)" *ngFor="let currentView of childArticleShowall | selected:filterByView">{{currentView.name}} {{currentView.sector}}
     <input *ngIf="currentView.pure === false" type="checkbox" checked (click)="toggleSelected(currentView, true)"/>
     <input *ngIf="currentView.pure === true" type="checkbox" (click)="toggleSelected(currentView, false)"/>
     <button (click)="changeView(currentView)">Choose Another Article</button>
   </li>
-</ul>
+</ul> -->

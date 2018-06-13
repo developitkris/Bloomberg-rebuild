@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Article } from '../../models/article.model';
 
 @Component({
@@ -8,17 +8,17 @@ import { Article } from '../../models/article.model';
 })
 export class ArticleReadComponent implements OnInit {
   @Input() childArticleRead: Article[];
-  @Output() clickSender = new EventEmitter();
+  // @Output() clickSender = new EventEmitter();
 
-  articleClicked(articleToRead: Article){
-    this.clickSender.emit(articleToRead);
-  }
+  // articleClicked(articleToRead: Article){
+  //   this.clickSender.emit(articleToRead);
+  // }
 
-  currentTitle = this.Article[].title = "";
-  authoredDate = new Date();
-  month: number = this.authoredDate.getMonth() + 1;
-  day: number = this.authoredDate.getDay();
-  year: number = this.authoredDate.getFullYear();
+  // currentTitle = Article[].title = "";
+  // authoredDate = new Date();
+  // month: number = authoredDate.getMonth() + 1;
+  // day: number = parseInt(this.authoredDate.getDay());
+  // yea)r: number = parseInt(this.authoredDate.getFullYear());
 
   constructor( //to be added onto Article object's existing parameters
     public date: Date,

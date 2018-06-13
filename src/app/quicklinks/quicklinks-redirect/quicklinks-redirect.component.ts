@@ -7,12 +7,12 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./quicklinks-redirect.component.css']
 })
 export class QuicklinksRedirectComponent implements OnInit {
-  @Input() childQuicklinksRedirect: Page[];
-  @Output() clickSender = new EventEmitter();
-
-  linkClicked(pageToGo: Page){
-    this.clickSender.emit(pageToGo);
-  }
+  // @Input() childQuicklinksRedirect: Page[];
+  // @Output() clickSender = new EventEmitter();
+  //
+  // linkClicked(pageToGo: Page){
+  //   this.clickSender.emit(pageToGo);
+  // }
   constructor() { }
 
   ngOnInit() {

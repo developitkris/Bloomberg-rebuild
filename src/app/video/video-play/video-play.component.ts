@@ -7,10 +7,10 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./video-play.component.css']
 })
 export class VideoPlayComponent implements OnInit {
-  @ViewChild('videoPlayer') videoplayer: any;
+  // @ViewChild('videoPlayer') videoplayer: any;
 
 toggleVideo(event: any) {
-    this.videoplayer.nativeElement.play();
+    // this.videoplayer.nativeElement.play();
 }
 
   constructor() { }

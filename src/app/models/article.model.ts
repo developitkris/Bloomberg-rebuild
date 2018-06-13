@@ -9,19 +9,19 @@ export class Article {
 }
 
 export class Account {
-  constructor {
+  constructor (
     public firstname: string,
     public lastname: string,
     public email: string,
     public pw: string,
-    public address: Address[] // subclass object
-  }
+    // public address: Address[] // subclass object
+  ){}
 }
 
 export class Page {
-  constructor {
+  constructor (
     public category: string,
     public video: String,
     public article: Article // contain peer class
-  }
+  ){}
 }

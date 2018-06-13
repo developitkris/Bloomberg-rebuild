@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core/core';
 import { Article } from '../../models/article.model';
 
 @Component({
@@ -21,7 +21,7 @@ export class ArticleShowallComponent implements OnInit {
   filterByView: string = "allArticles"; //default view
 
   constructor(
-    public boolean = false;
+    public boolean = false,
   ) { } //borrows from the Article constructor in Models
 
   articleSector(clicked){
@@ -43,7 +43,7 @@ export class ArticleShowallComponent implements OnInit {
   }
 
   toggleSelected(clickedArticle: Article, setSelected: boolean) {
-    clickedArticle.pure = setSelected;
+    // clickedArticle.pure = setSelected;
     }
   //method for filter change
   onChange(optionSelected){

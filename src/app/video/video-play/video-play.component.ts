@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Article } from '../../models/article.model';
 
 @Component({
@@ -9,9 +9,9 @@ import { Article } from '../../models/article.model';
 export class VideoPlayComponent implements OnInit {
   // @ViewChild('videoPlayer') videoplayer: any;
 
-toggleVideo(event: any) {
-    // this.videoplayer.nativeElement.play();
-}
+// toggleVideo(event: any) {
+//     this.videoplayer.nativeElement.play();
+// }
 
   constructor() { }
 

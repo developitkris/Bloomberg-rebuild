@@ -19,6 +19,7 @@ import { VideoShowallComponent } from './video/video-showall/video-showall.compo
 import { VideoPlayComponent } from './video/video-play/video-play.component';
 import { TickerUpdateComponent } from './ticker/ticker-update/ticker-update.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     VideoShowallComponent,
     VideoPlayComponent,
     TickerUpdateComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ import { QuicklinksRedirectComponent } from './quicklinks/quicklinks-redirect/qu
 import { VideoShowallComponent } from './video/video-showall/video-showall.component';
 import { VideoPlayComponent } from './video/video-play/video-play.component';
 import { TickerUpdateComponent } from './ticker/ticker-update/ticker-update.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TickerUpdateComponent } from './ticker/ticker-update/ticker-update.comp
     QuicklinksRedirectComponent,
     VideoShowallComponent,
     VideoPlayComponent,
-    TickerUpdateComponent
+    TickerUpdateComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

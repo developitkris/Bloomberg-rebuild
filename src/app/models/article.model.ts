@@ -4,7 +4,8 @@ export class Article {
     public sector: string,
     public author: string,
     public image: String,
-    public links: String
+    public links: String,
+    public id: number
   ){}
 }
 

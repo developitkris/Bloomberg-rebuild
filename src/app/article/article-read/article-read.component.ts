@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { Article } from '../../models/article.model';
 
 @Component({
@@ -7,7 +9,7 @@ import { Article } from '../../models/article.model';
   styleUrls: ['./article-read.component.css']
 })
 export class ArticleReadComponent implements OnInit {
-  @Input() childArticleRead: Article[];
+  articleId: number = null;
   // @Output() clickSender = new EventEmitter();
 
   // articleClicked(articleToRead: Article){
@@ -20,12 +22,17 @@ export class ArticleReadComponent implements OnInit {
   // day: number = parseInt(this.authoredDate.getDay());
   // yea)r: number = parseInt(this.authoredDate.getFullYear());
 
-  constructor( //to be added onto Article object's existing parameters
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
     public date: Date,
-    public content: string //maybe an array of strings)
+    public content: string[] //maybe an array of strings)
   ){}
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+    this.articleId = parseInt(urlParameters['id']);
+  });
   }
 
 }

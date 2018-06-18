@@ -12,19 +12,20 @@ export class ArticleService {
     return (recentArticles && topNews);
   }
 
-  getRecentById(articleId: number){
-    for(let i=0; i<=recentArticles.length-1; i++){
-      if(recentArticles[i].id ===articleId){
-        return recentArticles[i];
+  getArticleById(articleId: number){
+    if (recentArticles){
+      for(let i=0; i<=recentArticles.length-1; i++){
+        if(recentArticles[i].id ===articleId){
+          return recentArticles[i];
+        }
       }
-    }
-  }
-  getTopById(articleId: number){
-    for(let i=0; i<=topNews.length-1; i++){
-      if(topNews[i].id ===articleId){
-        return topNews[i];
+    } else {
+      for(let i=0; i<=topNews.length-1; i++){
+        if(topNews[i].id ===articleId){
+          return topNews[i];
+        }
       }
     }
   }
 
-}
+  }

@@ -11,7 +11,8 @@ import { ArticleService } from '../article.service';
   providers: [ArticleService]
 })
 export class ArticleReadComponent implements OnInit {
-  articleId: number = null;
+  articleId: number;
+  articleToDisplay: Article;
   // @Output() clickSender = new EventEmitter();
 
   // articleClicked(articleToRead: Article){
@@ -36,6 +37,7 @@ export class ArticleReadComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
     this.articleId = parseInt(urlParameters['id']);
   });
+    this.articleToDisplay = this.ArticleService.getArticleById(this.articleId);
   }
 
 }

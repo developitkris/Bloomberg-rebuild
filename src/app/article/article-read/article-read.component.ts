@@ -2,11 +2,13 @@ import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Article } from '../../models/article.model';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-article-read',
   templateUrl: './article-read.component.html',
-  styleUrls: ['./article-read.component.css']
+  styleUrls: ['./article-read.component.css'],
+  providers: [ArticleService]
 })
 export class ArticleReadComponent implements OnInit {
   articleId: number = null;
@@ -25,6 +27,7 @@ export class ArticleReadComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
+    private ArticleService: ArticleService,
     public date: Date,
     public content: string[] //maybe an array of strings)
   ){}

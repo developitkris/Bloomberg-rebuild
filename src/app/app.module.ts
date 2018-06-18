@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { HttpModule } from '@angular/http';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AccountCreateComponent } from './account/account-create/account-create.component';
 import { AccountLoginComponent } from './account/account-login/account-login.component';
@@ -21,6 +24,12 @@ import { TickerUpdateComponent } from './ticker/ticker-update/ticker-update.comp
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -46,7 +55,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

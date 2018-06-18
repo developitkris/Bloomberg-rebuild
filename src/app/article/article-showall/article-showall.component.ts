@@ -1,25 +1,30 @@
 import { Component, OnInit, EventEmitter} from '@angular/core';
 import { Article } from '../../models/article.model';
 import { Router } from '@angular/router';
+import { ArticleService } from '../article.service';
 
 
 @Component({
   selector: 'app-article-showall',
   templateUrl: './article-showall.component.html',
-  styleUrls: ['./article-showall.component.css']
+  styleUrls: ['./article-showall.component.css'],
+  providers: [ArticleService]
 })
+
 export class ArticleShowallComponent implements OnInit{
   recentArticles: Article[];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private articleService: ArticleService) {
+  }
+
+  ngOnInit() {
+    this.articles = this.articleService.getArticles();
   }
 
   goToReadArticle(clickedArticle: Article) {
    this.router.navigate(['articles', clickedArticle.id]);
   };
 
-  ngOnInit() {
-  }
 }
   // @Input() childArticleShowall: Article[];
   // @Output() clickSender = new EventEmitter();
